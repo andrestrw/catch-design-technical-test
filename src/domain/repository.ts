@@ -1,3 +1,6 @@
+export const PER_PAGE = 10;
+export const MAX_PAGES = 6;
+
 export type Repository = {
   id: number;
   name: string;

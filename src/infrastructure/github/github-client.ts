@@ -1,8 +1,9 @@
+import { PER_PAGE } from "../../domain/repository";
 import { parseGitHubLinkHeader, type ParsedLinkHeader } from "./link-header";
 
 const GITHUB_API_BASE = "https://api.github.com";
 const ORG = "github";
-const PER_PAGE = 10;
+
 
 /** Raw shape returned by GitHub before the mapper runs. */
 export type RawGitHubRepository = Record<string, unknown>;
