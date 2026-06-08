@@ -7,6 +7,7 @@ interface HomeProps {
 }
 
 export default async function Home({ searchParams }: HomeProps) {
+  // throw new Error("Error simulation");
   const { page } = await searchParams;
   const currentPage = Number.parseInt(page ?? "", 10) || 1;
   const { repos, hasNextPage } = await getRepositories(currentPage);

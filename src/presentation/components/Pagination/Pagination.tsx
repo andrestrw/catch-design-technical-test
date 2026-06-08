@@ -17,11 +17,11 @@ export function Pagination({ currentPage, hasNextPage }: PaginationProps) {
           className={styles.link}
           rel="prev"
         >
-          Anterior
+          Previous
         </Link>
       ) : (
         <span className={styles.disabled} aria-disabled="true">
-          Anterior
+          Previous
         </span>
       )}
 
@@ -31,11 +31,11 @@ export function Pagination({ currentPage, hasNextPage }: PaginationProps) {
           className={styles.link}
           rel="next"
         >
-          Siguiente
+          Next
         </Link>
       ) : (
         <span className={styles.disabled} aria-disabled="true">
-          Siguiente
+          Next
         </span>
       )}
     </nav>
