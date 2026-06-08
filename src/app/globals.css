@@ -10,6 +10,8 @@
     /* GitHub base palette (Primer) */
     --color-fg: #1f2328;
     --color-canvas: #ffffff;
+    /* GitHub's typical dark canvas background. */
+    --color-canvas-page: #0d1117;
 }
 
 * {
@@ -22,10 +24,11 @@ html {
 
 body {
     margin: 0;
+    min-height: 100vh;
     font-family: var(--font-sans);
     line-height: 1.5;
     color: var(--color-fg);
-    background-color: var(--color-canvas);
+    background-color: var(--color-canvas-page);
     -webkit-font-smoothing: antialiased;
 }
 

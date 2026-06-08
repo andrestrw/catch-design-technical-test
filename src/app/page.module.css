@@ -1,0 +1,59 @@
+/*
+ * Centered, responsive page container.
+ * Keeps comfortable side margins across viewports so content never touches
+ * the screen edges (the previous layout ran edge-to-edge on laptops).
+ */
+.main {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+.title {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    /* Readable on the dark canvas background (GitHub dark foreground). */
+    color: #e6edf3;
+}
+
+/* 15-inch laptops (~1366–1440px wide): pull content in from the edges. */
+@media (max-width: 1440px) {
+    .main {
+        max-width: 1120px;
+        padding: 2.25rem 2rem;
+    }
+}
+
+/* iPad landscape (~1024px). */
+@media (max-width: 1024px) {
+    .main {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* iPad portrait (~768px). */
+@media (max-width: 768px) {
+    .main {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+}
+
+/* iPhone SE and small phones (~375px). */
+@media (max-width: 480px) {
+    .main {
+        padding: 1.25rem 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
