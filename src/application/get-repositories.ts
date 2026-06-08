@@ -10,9 +10,14 @@ export interface GetRepositoriesResult {
 export async function getRepositories(
   page: number,
 ): Promise<GetRepositoriesResult> {
-  const { body, link } = await fetchOrgRepositories(page);
+
+  const safePage = Math.min(Math.max(page, 1), MAX_PAGES);
+
+  const { body, link } = await fetchOrgRepositories(safePage);
+
   const repos = mapToRepositories(body);
-  const hasNextPage = link.hasNext && page < MAX_PAGES;
+
+  const hasNextPage = link.hasNext && safePage < MAX_PAGES;
 
   return { repos, hasNextPage };
 }
